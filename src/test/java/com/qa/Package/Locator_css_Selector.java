@@ -17,8 +17,10 @@ public class Locator_css_Selector {
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         
 
-        //tag and attribute
-                //tag class and attribute
+        
+        //tag class and attribute
+
+        //testing the command
 
         driver.findElement(By.cssSelector("button.btn.btn_action.btn_medium.checkout_button[name='checkout']")).click();
         
