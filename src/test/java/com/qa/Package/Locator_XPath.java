@@ -8,8 +8,10 @@ public class Locator_XPath {
     public static void main(String[] args) {
         WebDriver driver= new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
+        //Using Tag name
         driver.findElement(By.xpath("//input[@name='user-name']")).sendKeys("standard_user");
-        driver.findElement(By.xpath("//input[@name='password']")).sendKeys("secret_sauce");
+        //Not using Tag name
+        driver.findElement(By.xpath("//*[@name='password']")).sendKeys("secret_sauce");
         driver.findElement(By.xpath("//input[@id='login-button']")).click();
 
         try {
