@@ -12,10 +12,13 @@ public class Locator_XPath {
         driver.findElement(By.xpath("//input[@name='user-name']")).sendKeys("standard_user");
         //Not using Tag name
         driver.findElement(By.xpath("//*[@name='password']")).sendKeys("secret_sauce");
-        driver.findElement(By.xpath("//input[@id='login-button']")).click();
+        
+        //Multiple Attributes
+        driver.findElement(By.xpath("//input[@id='login-button'][@name='login-button']")).click();
 
+        driver.findElement(By.xpath("//a[contains(@class,'shopping_cart')]")).click();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -23,3 +26,4 @@ public class Locator_XPath {
         driver.quit();
     }
 }
+ 
