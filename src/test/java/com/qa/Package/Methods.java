@@ -2,10 +2,11 @@ package com.qa.Package;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Methods {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws InterruptedException {
         // Initialize the WebDriver and launch a new Chrome browser instance
         WebDriver driver = new ChromeDriver();
         
@@ -31,8 +32,19 @@ public class Methods {
         String pageSource = driver.getPageSource();
         
         // Print the current URL to the console
-        System.out.print(URL);
+        //System.out.println(URL);
         
+        //IsDiplayed
+        WebElement shoppingCartLogo=driver.findElement(By.xpath("//a[@class='shopping_cart_link']"));
+        boolean shoppingCart=shoppingCartLogo.isDisplayed();
+        //System.out.println(shoppingCart);
+        
+        //isEnabled
+        System.out.println(driver.findElement(By.xpath("//a[@class='shopping_cart_link']")).isEnabled());
+        
+        //isSelected
+        
+        System.out.println(driver.findElement(By.xpath("//option[@value='az']")).isSelected());
         // Close the browser and end the session
         driver.quit();
     }    
