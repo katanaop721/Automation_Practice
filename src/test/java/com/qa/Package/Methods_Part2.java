@@ -1,6 +1,7 @@
 package com.qa.Package;
 
 import java.time.Duration;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,15 +14,26 @@ public class Methods_Part2 {
 
 WebDriver driver= new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));    //Using Implicit wait     
-        driver.get("https://www.saucedemo.com/");
-        //Using Tag name
-        driver.findElement(By.xpath("//input[@name='user-name']")).sendKeys("standard_user");
-        //Not using Tag name
-        driver.findElement(By.xpath("//*[@name='password']")).sendKeys("secret_sauce");
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         
-        //Multiple Attributes
-        driver.findElement(By.xpath("//input[@id='login-button'][@name='login-button']")).click();
-        System.out.println(driver.getWindowHandle());
+    
+
+        System.out.println(driver.getTitle());  //return the title of the webpage
+        System.out.println(driver.getCurrentUrl());   //return current url
+        
+        //System.out.println(driver.getPageSource());
+        String windowID=driver.getWindowHandle();
+        System.out.println(windowID);
+
+        //Note: Eberytime we launch a browser the window id changes
+
+        driver.findElement(By.xpath("//a[text()='OrangeHRM, Inc']")).click();
+        Set<String> windowID1=driver.getWindowHandles();
+        System.out.println(windowID1);
+        
+
+
+
         driver.quit();
 
 
