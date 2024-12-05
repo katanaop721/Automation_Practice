@@ -24,5 +24,6 @@ public class HandlingCheckboxes_Alerts {
     for(int i=4;i<checkbox.size();i++){
         checkbox.get(i).click();
     }
+    System.out.println(checkbox.get(4).isSelected()); // using this I can check that my check box is selected or not
    }   
 }
