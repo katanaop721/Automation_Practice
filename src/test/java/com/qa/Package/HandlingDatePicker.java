@@ -20,7 +20,7 @@ driver.findElement(By.xpath("//input[@id='datepicker']")).click();
 
 // Define the desired month and year to select from the datepicker.
 String month = "April";
-String year = "2027";
+String year = "2026";
 
 // Use a loop to navigate through the calendar until the desired month and year are displayed.
 while (true) {
@@ -37,7 +37,19 @@ while (true) {
         // The 'ui-icon-circle-triangle-e' class represents the "Next" button in the calendar.
         driver.findElement(By.xpath("//span[@class='ui-icon ui-icon-circle-triangle-e']")).click();
     }
-            }
+    }
+        //Select date
+        String date="25";
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=7;j++){  
+       String actualDate=driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']//tr["+i+"]//td["+j+"]")).getText();
+       if(actualDate.equals(date)){
+        driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']//tr["+i+"]//td["+j+"]")).click();
+        break;
+       }
+    }
+    }
+
             driver.quit();
     }
 }
