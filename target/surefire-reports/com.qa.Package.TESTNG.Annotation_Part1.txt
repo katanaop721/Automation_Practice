@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.qa.Package.TESTNG.Annotation_Part1
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.302 s <<< FAILURE! - in com.qa.Package.TESTNG.Annotation_Part1
+performLogout(com.qa.Package.TESTNG.Annotation_Part1)  Time elapsed: 0.339 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=131.0.6778.205)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ccf0468b307534fbe3c77bbda94a0b57, clickElement {id=f.3ABA892C65C967FCF44949855AA1CC32.d.B957CCA372755B83CA08674269FD084D.e.25}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\ANKUKU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52694}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52694/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ccf0468b307534fbe3c77bbda94a0b57)] -> xpath: //a[@id='logout_sidebar_link']]
+Session ID: ccf0468b307534fbe3c77bbda94a0b57
+	at com.qa.Package.TESTNG.Annotation_Part1.performLogout(Annotation_Part1.java:41)
+
