@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.qa.Package.TESTNG.Assertions
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.671 s <<< FAILURE! - in com.qa.Package.TESTNG.Assertions
+softassert(com.qa.Package.TESTNG.Assertions)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	expected [fgjjw] but found [Hello]
+	at com.qa.Package.TESTNG.Assertions.softassert(Assertions.java:25)
+

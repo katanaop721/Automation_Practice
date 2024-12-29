@@ -3,13 +3,11 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.qa.Package.TESTNG.Annotation_Part1">
+      <class name="com.qa.Package.TESTNG.Assertions">
         <methods>
-          <include name="performLogout"/>
-          <include name="performLogin"/>
-          <include name="performAddtoCart1"/>
+          <include name="softassert"/>
         </methods>
-      </class> <!-- com.qa.Package.TESTNG.Annotation_Part1 -->
+      </class> <!-- com.qa.Package.TESTNG.Assertions -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
