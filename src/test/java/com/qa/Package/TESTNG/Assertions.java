@@ -20,7 +20,7 @@ public class Assertions {
         String act="Hello";
         SoftAssert sa=new SoftAssert();
         sa.assertEquals(act, exp);
-        System.out.print("Hello testing");
+        System.out.print("Hello testing"); 
         //sa.assertNotEquals(321,321);
         sa.assertAll();
     }
