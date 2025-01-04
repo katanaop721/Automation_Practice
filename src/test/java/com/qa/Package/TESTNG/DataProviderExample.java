@@ -5,17 +5,26 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DataProviderExample {
     WebDriver driver;
 
     @BeforeClass
-    void setup() {
-        driver = new ChromeDriver();
+    @Parameters({"browser"})
+    void setup(String br){
+
+        switch(br){ 
+       case "chrome": driver = new ChromeDriver();break;
+       case "edge":driver=new EdgeDriver();break;
+            default:System.out.println("Null");return;
+
+    }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
         // Navigate to the login page
         driver.get("https://www.saucedemo.com/");

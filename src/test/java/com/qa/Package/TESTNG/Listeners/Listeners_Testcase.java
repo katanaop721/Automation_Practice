@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
@@ -28,18 +29,28 @@ public class Listeners_Testcase {
         driver.findElement(By.xpath("//input[@data-test='password']")).sendKeys("secret_sauce");
         driver.findElement(By.xpath("//input[@id='login-button'][@name='login-button']")).click();
     }
+
     @Test(priority = 1)
     void checklogo() {
-        boolean status=driver.findElement(By.xpath("//div[@class='app_logo']")).isDisplayed();
-        Assert.assertEquals(status,true);
+        boolean status = driver.findElement(By.xpath("//div[@class='app_logo']")).isDisplayed();
+        Assert.assertEquals(status, true);
     }
+
     @Test(priority = 2)
     void checkPageTitle() {
-        String title=driver.getTitle();
-        Assert.assertEquals(title,"Swag Labs");
+        String title = driver.getTitle();
+        Assert.assertEquals(title, "Swag Lab");
     }
+
+    @Test(priority = 3)
+    void checkSkippedTest() {
+        // Explicitly skipping this test using SkipException
+        System.out.println("This test will be skipped");
+        throw new SkipException("Skipping this test explicitly.");
+    }
+
     @AfterClass
-    void teardown(){
+    void teardown() {
         driver.quit();
     }
 }
