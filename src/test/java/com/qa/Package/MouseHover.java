@@ -39,7 +39,8 @@ public class MouseHover {
         WebElement target = driver.findElement(By.xpath("//div[@id='box107']"));
         actions.dragAndDrop(source, target).perform();
 
+
         // Close the browser session
-        driver.quit();
+        //driver.quit();
     }
 }
