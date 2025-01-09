@@ -1,8 +1,6 @@
 package com.qa.Package;
 
-import java.beans.BeanInfo;
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 
 public class Test {
@@ -44,7 +41,7 @@ public class Test {
 
 
         //handling date picker
-        // driver.switchTo().frame(driver.findElement(By.xpath("//div[@class='date-picker-box']")));
+
         // driver.findElement(By.id("datepicker")).click();
 
         // String month="April";
